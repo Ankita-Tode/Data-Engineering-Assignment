@@ -11,72 +11,39 @@ This project demonstrates a **B2B-style data pipeline** that:
 
 **Source:** Books to Scrape (demo scraping site)
 
-# **🏗 Project Architecture**
+## 🏗️ Project Architecture
 
-+-------------------+
-| Scraper |
-| scraper.py |
-| - Fetches book |
-| data from |
-| website |
-+---------+---------+
-|
-v
-+-------------------+
-| Data Cleaning |
-| cleaning.py |
-| - Remove duplicates|
-| - Standardize |
-| prices & text |
-+---------+---------+
-|
-v
-+-------------------+
-| Database |
-| db.py |
-| - Store cleaned |
-| data in MySQL |
-| / PostgreSQL |
-+---------+---------+
-|
-v
-+-------------------+
-| API |
-| fastapi.py |
-| - Expose data via |
-| /jobs endpoint |
-+---------+---------+
-|
-v
-+-------------------+
-| Automation (Cron) |
-| - Run pipeline.py |
-| daily @ 2AM |
-+-------------------+
+- Scraper (scraper.py)
+- Data Cleaning (cleaning.py)
+- Database (db.py)
+- API (fastapi.py)
+- Automation (Cron Job)
 
 
-# **📂 Project Structure**
+## 📁 Project Structure
+
+```
 project/
 │
-├─ scraper/
-│ └─ scraper.py # Scrapes book data from website
+├── scraper/
+│   └── scraper.py        # Scrapes data from website
 │
-├─ pipeline/
-│ ├─ cleaning.py # Cleans and standardizes scraped data
-│ └─ pipeline.py # Runs scraper + cleaning + database insertion
+├── pipeline/
+│   ├── cleaning.py       # Data preprocessing and cleaning
+│   └── pipeline.py       # Pipeline orchestration
 │
-├─ database/
-│ └─ db.py # Inserts cleaned data into database
+├── database/
+│   └── db.py             # Database connection & insertion
 │
-├─ api/
-│ └─ fastapi.py # FastAPI server exposing /jobs endpoint
+├── api/
+│   └── fastapi.py        # API endpoints (/jobs)
 │
-├─ logs/
-│ └─ pipeline.log # Logs for cron automation
+├── logs/
+│   └── pipeline.log      # Execution logs
 │
-├─ requirements.txt # Python dependencies
-└─ README.md # Project documentation
-
+├── requirements.txt      # Dependencies
+└── README.md             # Documentation
+```
 
 # **🛠 Tech Stack**
 
