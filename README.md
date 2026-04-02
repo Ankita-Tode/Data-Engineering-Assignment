@@ -295,7 +295,7 @@ CREATE TABLE clean_book (
     price FLOAT,
     availability VARCHAR(50)
 );
-PostgreSQL example (if using fastapi.py):
+My SQL example (if using fastapi.py):
 CREATE DATABASE clean_book;
 
 CREATE TABLE clean_book (
@@ -321,17 +321,7 @@ Access the data:
 
 GET http://127.0.0.1:8000/jobs
 
-Sample JSON response:
 
-[
-  {
-    "title": "A Light in the Attic",
-    "price": 51.77,
-    "availability": "In stock"
-  },
-  ...
-]
-Automation with Cron
 
 Run the pipeline automatically every day at 2 AM:
 
