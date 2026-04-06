@@ -68,45 +68,28 @@ bookscrapper/
 
 # **⚡ Setup Instructions**
 
-1. **Clone the repository**
-```bash
-git clone <your-repo-url>
-cd project
+✅ Step 1: Install Requirements (First Time Only)
 
-2. Create a virtual environment
+Install these:
 
-python3 -m venv venv
-source venv/bin/activate  # Linux / Mac
-venv\Scripts\activate     # Windows
+Python (3.9+ recommended) Git
 
-3.Install dependencies
+Check:python --version git --version
 
-pip install -r requirements.txt
+✅ Step 2:git clone https://github.com/Ankita-Tode/BOOK-SCRAPPER-DATA-ENGINEERING.git Clone the Repository
 
+Then go inside: cd BOOK-SCRAPPER-DATA-ENGINEERING
 
-4.Environment Variables (optional but recommended)
-Create a .env file in the root:
+✅ Step 3: Create Virtual Environment python -m venv venv
 
-DB_HOST=localhost
-DB_USER=root
-DB_PASSWORD=
-DB_NAME=clean_book
- 
-6 Run the pipeline manually
-python pipeline/pipeline.py
+✅ Step 4: Activate Environment Windows:venv\Scripts\activate
 
-🚀 API Usage
+✅ Step 5: Install Dependencies pip install -r requirements.txt
 
-Start the FastAPI server:
-uvicorn api.fastapi:app --reload
+✅ Step 6: Run Your Project
 
-Access the data:
-GET http://127.0.0.1:8000/
+Based on your project type (FastAPI): uvicorn main:app --reload
 
+🌐 Step 7: Open in Browser
 
-
-✅ Notes / Best Practices
-Handle missing or inconsistent data carefully
-
-Wrap API responses in JSON with column names for clarity
-Keep credentials in .env rather than hardcoding
+Go to:http://127.0.0.1:8000
